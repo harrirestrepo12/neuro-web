@@ -449,6 +449,24 @@ export default function NeuroChatPage() {
                   <p className="mx-auto mt-5 max-w-4xl text-lg leading-relaxed text-white/78 md:text-2xl">
                     {headerHint}
                   </p>
+
+                  <div className="mx-auto mt-6 grid max-w-4xl gap-3 rounded-[28px] border border-emerald-400/20 bg-black/35 p-4 text-left shadow-[0_18px_60px_rgba(0,0,0,0.35)] backdrop-blur-xl md:grid-cols-[1fr_auto] md:items-center">
+                    <div>
+                      <div className="text-sm font-semibold text-emerald-300">
+                        Neuro Chat incluido con Neuro Trading
+                      </div>
+                      <div className="mt-1 text-sm leading-6 text-white/70">
+                        30 días gratis. Luego desde USD $19/mes. Plan Pro recomendado: USD $39/mes.
+                      </div>
+                    </div>
+
+                    <a
+                      href="/pricing"
+                      className="rounded-2xl border border-emerald-400/25 bg-emerald-400/10 px-5 py-3 text-center text-sm font-bold text-emerald-100 transition hover:bg-emerald-400 hover:text-black"
+                    >
+                      Ver planes
+                    </a>
+                  </div>
                 </div>
               </div>
             </Container>
