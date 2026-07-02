@@ -142,7 +142,7 @@ export default function MarketRiskOverlay({
           label="Execution"
           value={wsState}
           tone={execTone}
-          detail={wsState === "LIVE" ? "Feed listo" : wsState === "CONNECTING" ? "Sincronizando" : wsState === "READY" ? "Standby operativo" : "Validar conexión"}
+          detail={wsState === "LIVE" ? "Feed listo" : wsState === "CONNECTING" ? "Sincronizando" : wsState === "READY" ? "Listo para sincronizar" : "Validar conexión"}
           width={buildBarWidth(wsState === "LIVE" ? 1 : wsState === "CONNECTING" ? 0.6 : wsState === "READY" ? 0.45 : 0.15, 1)}
         />
 

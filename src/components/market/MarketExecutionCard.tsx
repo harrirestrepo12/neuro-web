@@ -51,7 +51,7 @@ export default function MarketExecutionCard({
         </div>
 
         <span className={`rounded-full border px-3 py-1 text-[11px] font-medium ${tone(wsState)}`}>
-          {live ? "READY" : wsState}
+          {live ? "Listo" : wsState === "READY" ? "Listo" : wsState}
         </span>
       </div>
 
