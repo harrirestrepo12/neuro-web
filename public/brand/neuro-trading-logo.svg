@@ -1,0 +1,44 @@
+﻿<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="neuroGrad" x1="80" y1="60" x2="420" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00E5FF"/>
+      <stop offset="0.52" stop-color="#00CBA7"/>
+      <stop offset="1" stop-color="#32F07A"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="510" y1="90" x2="1050" y2="260" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#D9E5F2"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="420" rx="36" fill="#081320"/>
+
+  <g filter="url(#glow)">
+    <path d="M165 310V95L350 310V95H410V325H350L225 177V310H165Z" fill="url(#neuroGrad)"/>
+    <path d="M325 210L385 145L420 170L492 70" stroke="#32F07A" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M492 70L485 124L446 88L492 70Z" fill="#32F07A"/>
+
+    <circle cx="100" cy="180" r="13" fill="#00E5FF"/>
+    <circle cx="145" cy="135" r="13" fill="#00E5FF"/>
+    <circle cx="165" cy="215" r="13" fill="#00E5FF"/>
+    <circle cx="115" cy="265" r="13" fill="#00E5FF"/>
+    <circle cx="70" cy="230" r="13" fill="#00E5FF"/>
+    <circle cx="75" cy="150" r="13" fill="#00E5FF"/>
+    <path d="M75 150L145 135L165 215L115 265L70 230L75 150ZM75 150L165 215M145 135L70 230M100 180L115 265" stroke="#00E5FF" stroke-width="5" opacity="0.9"/>
+  </g>
+
+  <line x1="475" y1="95" x2="475" y2="325" stroke="#2D415C" stroke-width="2"/>
+
+  <text x="540" y="178" fill="url(#textGrad)" font-family="Arial, Helvetica, sans-serif" font-size="92" font-weight="800" letter-spacing="16">NEURO</text>
+  <rect x="699" y="132" width="80" height="14" rx="7" fill="#00E5FF"/>
+  <text x="545" y="260" fill="#00E5FF" font-family="Arial, Helvetica, sans-serif" font-size="50" font-weight="700" letter-spacing="38">TRADING</text>
+  <text x="548" y="320" fill="#D9E5F2" font-family="Arial, Helvetica, sans-serif" font-size="24" letter-spacing="16">AI INTELLIGENCE.</text>
+  <text x="835" y="320" fill="#32F07A" font-family="Arial, Helvetica, sans-serif" font-size="24" letter-spacing="12">MARKET EDGE.</text>
+</svg>

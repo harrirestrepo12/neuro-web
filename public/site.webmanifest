@@ -1,0 +1,17 @@
+﻿{
+  "name": "Neuro Trading",
+  "short_name": "Neuro",
+  "description": "Plataforma inteligente de trading, análisis, riesgo y automatización.",
+  "start_url": "/app",
+  "display": "standalone",
+  "background_color": "#081320",
+  "theme_color": "#081320",
+  "icons": [
+    {
+      "src": "/brand/neuro-trading-icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

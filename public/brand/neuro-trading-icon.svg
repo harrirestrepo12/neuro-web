@@ -1,0 +1,33 @@
+﻿<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="neuroIconGrad" x1="105" y1="85" x2="420" y2="410" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00E5FF"/>
+      <stop offset="0.5" stop-color="#00CBA7"/>
+      <stop offset="1" stop-color="#32F07A"/>
+    </linearGradient>
+    <filter id="iconGlow">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect x="24" y="24" width="464" height="464" rx="96" fill="#081320"/>
+  <rect x="24" y="24" width="464" height="464" rx="96" stroke="#1D3148" stroke-width="8"/>
+
+  <g filter="url(#iconGlow)">
+    <path d="M150 368V116L330 368V116H385V385H326L205 213V368H150Z" fill="url(#neuroIconGrad)"/>
+    <path d="M300 255L350 198L382 222L435 145" stroke="#32F07A" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M435 145L428 196L392 162L435 145Z" fill="#32F07A"/>
+
+    <circle cx="88" cy="220" r="13" fill="#00E5FF"/>
+    <circle cx="130" cy="180" r="13" fill="#00E5FF"/>
+    <circle cx="150" cy="255" r="13" fill="#00E5FF"/>
+    <circle cx="112" cy="315" r="13" fill="#00E5FF"/>
+    <circle cx="70" cy="280" r="13" fill="#00E5FF"/>
+    <circle cx="75" cy="160" r="13" fill="#00E5FF"/>
+    <path d="M75 160L130 180L150 255L112 315L70 280L75 160ZM75 160L150 255M130 180L70 280M88 220L112 315" stroke="#00E5FF" stroke-width="5"/>
+  </g>
+</svg>

@@ -56,11 +56,11 @@ const DOWNLOADS: DownloadItem[] = [
     key: "web",
     platform: "Web",
     status: "Live",
-    title: "Neuro Web (este portal)",
-    desc: "Información, planes, seguridad, tecnología y acceso a Neuro Chat.",
-    chips: ["Web", "Neuro Chat", "Actualizaciones"],
-    primaryCta: { label: "Abrir Neuro Chat", href: "/neuro-chat", variant: "secondary" },
-    secondaryCta: { label: "Ver tecnología", href: "/technology", variant: "outline" },
+    title: "Neuro Trading Web Platform",
+    desc: "Acceso web a la plataforma Neuro Trading: dashboard, cuentas, trading, planes y Neuro Chat.",
+    chips: ["Web App", "PWA", "Plataforma"],
+    primaryCta: { label: "Abrir plataforma", href: "https://neuro-trading-frontend.vercel.app/app", variant: "secondary" },
+    secondaryCta: { label: "Ver planes", href: "/pricing", variant: "outline" },
   },
 ];
 
@@ -116,7 +116,7 @@ export default function DownloadPage() {
                     </p>
 
                     <div className="mt-5 flex flex-wrap gap-3">
-                      <FXButtonPro href="/neuro-chat" variant="secondary" size="lg">
+                      <FXButtonPro href="https://neuro-trading-frontend.vercel.app/app" variant="secondary" size="lg">
                         Preguntar a Neuro Chat
                       </FXButtonPro>
                       <FXButtonPro href="/technology" variant="outline" size="lg">
@@ -167,7 +167,7 @@ export default function DownloadPage() {
                 </div>
 
                 <div className="hidden md:flex gap-3">
-                  <FXButtonPro href="/neuro-chat" variant="outline" size="sm">
+                  <FXButtonPro href="https://neuro-trading-frontend.vercel.app/app" variant="outline" size="sm">
                     Soporte rápido
                   </FXButtonPro>
                   <FXButtonPro href="/pricing" variant="secondary" size="sm">
@@ -183,7 +183,7 @@ export default function DownloadPage() {
               </div>
 
               <div className="mt-6 flex md:hidden gap-3">
-                <FXButtonPro href="/neuro-chat" variant="outline" size="sm">
+                <FXButtonPro href="https://neuro-trading-frontend.vercel.app/app" variant="outline" size="sm">
                   Soporte rápido
                 </FXButtonPro>
                 <FXButtonPro href="/pricing" variant="secondary" size="sm">
@@ -238,7 +238,7 @@ export default function DownloadPage() {
                 </div>
 
                 <div className="mt-6 flex flex-wrap gap-3">
-                  <FXButtonPro href="/neuro-chat" variant="primary" size="lg">
+                  <FXButtonPro href="https://neuro-trading-frontend.vercel.app/app" variant="primary" size="lg">
                     Preguntar soporte
                   </FXButtonPro>
                   <FXButtonPro href="/security" variant="outline" size="lg">

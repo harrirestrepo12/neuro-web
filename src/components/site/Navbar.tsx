@@ -1,8 +1,10 @@
-﻿"use client";
+"use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { NEURO_BRAND } from "@/lib/neuroBrand";
 
 const navItems = [
   { label: "Inicio", href: "/" },
@@ -16,7 +18,7 @@ const navItems = [
 
 function isActive(pathname: string, href: string) {
   if (href === "/") return pathname === "/";
-  return pathname === href || pathname.startsWith(`${href}/`);
+  return pathname === href || pathname.startsWith(href + "/");
 }
 
 export default function Navbar() {
@@ -34,15 +36,21 @@ export default function Navbar() {
     <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-slate-950/75 backdrop-blur-xl">
       <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
         <Link href="/" className="group flex items-center gap-3" onClick={() => setOpen(false)}>
-          <span className="grid h-10 w-10 place-items-center rounded-2xl bg-cyan-300 text-sm font-black text-slate-950 shadow-[0_0_35px_rgba(34,211,238,0.35)]">
-            N
-          </span>
+          <Image
+            src={NEURO_BRAND.assets.icon}
+            alt={NEURO_BRAND.name}
+            width={48}
+            height={48}
+            priority
+            unoptimized
+            className="h-12 w-12 rounded-2xl shadow-[0_0_35px_rgba(34,211,238,0.35)]"
+          />
           <span>
             <span className="block text-sm font-black tracking-[0.25em] text-white">
               NEURO
             </span>
             <span className="block text-xs font-medium text-cyan-200">
-              Trading Intelligence
+              Trading Platform
             </span>
           </span>
         </Link>
@@ -54,11 +62,12 @@ export default function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
-                  active
+                className={
+                  "rounded-full px-4 py-2 text-sm font-semibold transition " +
+                  (active
                     ? "bg-cyan-300 text-slate-950"
-                    : "text-slate-300 hover:bg-white/10 hover:text-white"
-                }`}
+                    : "text-slate-300 hover:bg-white/10 hover:text-white")
+                }
               >
                 {item.label}
               </Link>
@@ -70,6 +79,12 @@ export default function Navbar() {
           <Link
             href="/download"
             className="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-5 py-2.5 text-sm font-bold text-cyan-100 transition hover:bg-cyan-300 hover:text-slate-950"
+          >
+            Descargar
+          </Link>
+          <Link
+            href="https://neuro-trading-frontend.vercel.app/app"
+            className="rounded-full bg-cyan-300 px-5 py-2.5 text-sm font-black text-slate-950 transition hover:bg-white"
           >
             Abrir plataforma
           </Link>
@@ -96,11 +111,12 @@ export default function Navbar() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className={`rounded-2xl px-4 py-4 text-base font-semibold transition ${
-                    active
+                  className={
+                    "rounded-2xl px-4 py-4 text-base font-semibold transition " +
+                    (active
                       ? "bg-cyan-300 text-slate-950"
-                      : "bg-white/[0.04] text-slate-200 hover:bg-white/10"
-                  }`}
+                      : "bg-white/[0.04] text-slate-200 hover:bg-white/10")
+                  }
                 >
                   {item.label}
                 </Link>
@@ -110,9 +126,17 @@ export default function Navbar() {
             <Link
               href="/download"
               onClick={() => setOpen(false)}
-              className="mt-3 rounded-2xl bg-cyan-300 px-4 py-4 text-center text-base font-black text-slate-950"
+              className="mt-3 rounded-2xl border border-cyan-300/30 bg-cyan-300/10 px-4 py-4 text-center text-base font-black text-cyan-100"
             >
               Descargar Neuro Trading
+            </Link>
+
+            <Link
+              href="https://neuro-trading-frontend.vercel.app/app"
+              onClick={() => setOpen(false)}
+              className="rounded-2xl bg-cyan-300 px-4 py-4 text-center text-base font-black text-slate-950"
+            >
+              Abrir plataforma
             </Link>
           </div>
         </div>
