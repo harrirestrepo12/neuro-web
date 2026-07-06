@@ -9,7 +9,7 @@ import Panel3D from "@/components/site/Panel3D";
 import PwaInstallButton from "@/components/site/PwaInstallButton";
 import { NEURO_BRAND } from "@/lib/neuroBrand";
 
-const APP_URL = "https://neuro-trading-frontend.vercel.app/app";
+const APP_URL = "https://app.neurotrading.app/app";
 
 type DownloadStatus = "Disponible" | "Próximamente";
 

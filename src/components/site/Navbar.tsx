@@ -83,7 +83,7 @@ export default function Navbar() {
             Descargar
           </Link>
           <Link
-            href="https://neuro-trading-frontend.vercel.app/app"
+            href="https://app.neurotrading.app/app"
             className="rounded-full bg-cyan-300 px-5 py-2.5 text-sm font-black text-slate-950 transition hover:bg-white"
           >
             Abrir plataforma
@@ -132,7 +132,7 @@ export default function Navbar() {
             </Link>
 
             <Link
-              href="https://neuro-trading-frontend.vercel.app/app"
+              href="https://app.neurotrading.app/app"
               onClick={() => setOpen(false)}
               className="rounded-2xl bg-cyan-300 px-4 py-4 text-center text-base font-black text-slate-950"
             >
