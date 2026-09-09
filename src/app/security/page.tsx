@@ -4,6 +4,7 @@ import FXBackground from "@/components/site/FXBackground";
 import Container from "@/components/layout/Container";
 import FXButtonPro from "@/components/site/FXButtonPro";
 import Panel3D from "@/components/site/Panel3D";
+import { NEURO_REGISTER_URL } from "@/lib/neuroLinks";
 
 const protectionBlocks = [
   {
@@ -126,8 +127,8 @@ export default function SecurityPage() {
                       <FXButtonPro href="/pricing" variant="primary" size="lg">
                         Ver planes
                       </FXButtonPro>
-                      <FXButtonPro href="/download" variant="outline" size="lg">
-                        Descargar Neuro
+                      <FXButtonPro href={NEURO_REGISTER_URL} variant="outline" size="lg">
+                        Probar Neuro 30 días
                       </FXButtonPro>
                     </div>
 
@@ -309,8 +310,8 @@ export default function SecurityPage() {
                       <FXButtonPro href="/pricing" variant="primary" size="lg">
                         Ver planes
                       </FXButtonPro>
-                      <FXButtonPro href="/download" variant="outline" size="lg">
-                        Descargar Neuro
+                      <FXButtonPro href={NEURO_REGISTER_URL} variant="outline" size="lg">
+                        Probar Neuro 30 días
                       </FXButtonPro>
                     </div>
                   </div>

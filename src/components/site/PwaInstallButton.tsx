@@ -14,7 +14,7 @@ type PwaInstallButtonProps = {
 
 export default function PwaInstallButton({
   className = "",
-  label = "Instalar Neuro Web",
+  label = "Instalar acceso directo",
 }: PwaInstallButtonProps) {
   const [installPrompt, setInstallPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [installed, setInstalled] = useState(false);
@@ -43,7 +43,9 @@ export default function PwaInstallButton({
     if (installed) return;
 
     if (!installPrompt) {
-      alert("Si el botón de instalación no aparece todavía, abre el menú de Chrome o Edge y elige Instalar aplicación. En celular, usa Agregar a pantalla de inicio.");
+      alert(
+        "La instalación es opcional. Si el botón no aparece, abre el menú de Chrome o Edge y elige Instalar aplicación. En celular, usa Agregar a pantalla de inicio."
+      );
       return;
     }
 
@@ -58,7 +60,7 @@ export default function PwaInstallButton({
       onClick={handleInstall}
       className={`rounded-full border border-emerald-300/35 bg-emerald-300/10 px-5 py-3 text-sm font-black text-emerald-100 transition hover:bg-emerald-300 hover:text-slate-950 ${className}`}
     >
-      {installed ? "Neuro ya está instalado" : label}
+      {installed ? "Acceso directo instalado" : label}
     </button>
   );
 }

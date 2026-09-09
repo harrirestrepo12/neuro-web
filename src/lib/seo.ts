@@ -5,11 +5,13 @@ export const PLATFORM_URL = "https://app.neurotrading.app/app";
 export const BRAND_NAME = "Neuro Trading";
 export const BRAND_TAGLINE = "AI Intelligence. Market Edge.";
 export const BRAND_DESCRIPTION =
-  "Neuro Trading es una plataforma de trading con inteligencia artificial, conexión a broker, enfoque en gestión de riesgo, análisis de mercado y experiencia profesional para traders.";
+  "Neuro Trading es una plataforma Cloud de trading con inteligencia artificial, conexión a broker, gestión de riesgo, análisis de mercado y acceso profesional desde navegador.";
 
 export const SEO_KEYWORDS = [
   "Neuro Trading",
+  "Neuro Cloud",
   "plataforma de trading",
+  "plataforma de trading online",
   "trading con inteligencia artificial",
   "IA para trading",
   "MT5",
@@ -25,9 +27,9 @@ export const SEO_KEYWORDS = [
 ];
 
 export const SEO_PAGES = [
-  { path: "/", title: "Neuro Trading | Plataforma de trading con IA", description: "Plataforma profesional de trading con inteligencia artificial, gestión de riesgo, conexión a broker y experiencia web instalable.", priority: 1, changeFrequency: "daily" as const },
-  { path: "/download", title: "Descargar Neuro Trading | Web App, Windows, Android e iOS", description: "Instala Neuro Trading como Web App y conoce las próximas versiones para Windows, Android e iOS.", priority: 0.95, changeFrequency: "weekly" as const },
-  { path: "/pricing", title: "Planes Neuro Trading | Acceso a plataforma", description: "Consulta los planes de acceso a Neuro Trading, prueba privada y opciones para usuarios de la plataforma.", priority: 0.9, changeFrequency: "weekly" as const },
+  { path: "/", title: "Neuro Trading | Plataforma Cloud de trading con IA", description: "Plataforma profesional de trading con inteligencia artificial, gestión de riesgo, conexión a broker y acceso online desde navegador.", priority: 1, changeFrequency: "daily" as const },
+  { path: "/cloud", title: "Neuro Cloud | Acceso online a Neuro Trading", description: "Accede a Neuro Trading desde navegador sin descarga obligatoria. PWA opcional y apps nativas como complementos futuros.", priority: 0.95, changeFrequency: "weekly" as const },
+  { path: "/pricing", title: "Planes Neuro Trading | 30 días de prueba", description: "Consulta Starter, Pro y Elite y crea tu cuenta para acceder a la prueba de 30 días de Neuro Trading.", priority: 0.9, changeFrequency: "weekly" as const },
   { path: "/security", title: "Seguridad Neuro Trading | Riesgo, acceso y control", description: "Conoce el enfoque de seguridad, control de riesgo, límites operativos y protección de acceso en Neuro Trading.", priority: 0.85, changeFrequency: "weekly" as const },
   { path: "/technology", title: "Tecnología Neuro Trading | IA, datos y arquitectura", description: "Explora la tecnología de Neuro Trading: inteligencia artificial, arquitectura web, conexión a broker y análisis de mercado.", priority: 0.8, changeFrequency: "weekly" as const },
   { path: "/brokers", title: "Brokers compatibles | Neuro Trading", description: "Información sobre conexión a brokers, cuentas demo, cuentas reales y flujo de integración de Neuro Trading.", priority: 0.78, changeFrequency: "weekly" as const },
@@ -51,7 +53,7 @@ export const NEURO_METADATA: Metadata = {
   metadataBase: new URL(SITE_URL),
   applicationName: BRAND_NAME,
   title: {
-    default: "Neuro Trading | Plataforma de trading con IA",
+    default: "Neuro Trading | Plataforma Cloud de trading con IA",
     template: "%s | Neuro Trading",
   },
   description: BRAND_DESCRIPTION,
@@ -66,13 +68,13 @@ export const NEURO_METADATA: Metadata = {
     locale: "es_CO",
     url: SITE_URL,
     siteName: BRAND_NAME,
-    title: "Neuro Trading | Plataforma de trading con IA",
+    title: "Neuro Trading | Plataforma Cloud de trading con IA",
     description: BRAND_DESCRIPTION,
     images: [openGraphImage],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Neuro Trading | Plataforma de trading con IA",
+    title: "Neuro Trading | Plataforma Cloud de trading con IA",
     description: BRAND_DESCRIPTION,
     images: [openGraphImage.url],
   },
@@ -127,11 +129,10 @@ export const softwareApplicationJsonLd = {
   "@type": "SoftwareApplication",
   name: BRAND_NAME,
   applicationCategory: "FinanceApplication",
-  operatingSystem: "Web, Windows, Android, iOS",
+  operatingSystem: "Web",
   url: PLATFORM_URL,
-  downloadUrl: `${SITE_URL}/download`,
   description:
-    "Aplicación web de trading con inteligencia artificial, conexión a broker y herramientas de control de riesgo. Operar implica riesgo y no hay resultados garantizados.",
+    "Plataforma Cloud de trading con inteligencia artificial, conexión a broker y herramientas de control de riesgo. Acceso desde navegador; operar implica riesgo y no hay resultados garantizados.",
   offers: {
     "@type": "Offer",
     category: "Subscription",

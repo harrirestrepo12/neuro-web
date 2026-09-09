@@ -1,8 +1,9 @@
 ﻿{
   "name": "Neuro Trading",
   "short_name": "Neuro",
-  "description": "Plataforma inteligente de trading, análisis, riesgo y automatización.",
-  "start_url": "/app",
+  "description": "Acceso Cloud a Neuro Trading: análisis, riesgo, IA y plataforma online.",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#081320",
   "theme_color": "#081320",

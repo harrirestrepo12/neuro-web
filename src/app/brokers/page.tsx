@@ -6,6 +6,7 @@ import FXBackground from "@/components/site/FXBackground";
 import Container from "@/components/layout/Container";
 import FXButtonPro from "@/components/site/FXButtonPro";
 import Panel3D from "@/components/site/Panel3D";
+import { NEURO_REGISTER_URL } from "@/lib/neuroLinks";
 
 type Status = "Live" | "En progreso" | "Próximamente";
 type Connect = "MT5" | "API" | "FIX";
@@ -33,7 +34,7 @@ const BROKERS: Broker[] = [
     name: "IC Markets",
     status: "Próximamente",
     connects: ["MT5", "FIX"],
-    note: "Alto rendimiento y buena liquidez. Enrutamiento por gateway (fase avanzada).",
+    note: "Alto rendimiento y buena liquidez. Enrutamiento por la infraestructura de conexión Neuro (fase avanzada).",
   },
   {
     key: "pepperstone",
@@ -47,14 +48,14 @@ const BROKERS: Broker[] = [
     name: "XM",
     status: "Próximamente",
     connects: ["MT5"],
-    note: "Compatibilidad mediante bridge MT5 (fase inicial).",
+    note: "Compatibilidad mediante conector MT5 (fase inicial).",
   },
   {
     key: "roboforex",
     name: "RoboForex",
     status: "Próximamente",
     connects: ["MT5"],
-    note: "Integración multi-cuenta por gateway (fase posterior).",
+    note: "Integración multi-cuenta mediante la conexión Neuro (fase posterior).",
   },
   {
     key: "fxpro",
@@ -68,21 +69,21 @@ const BROKERS: Broker[] = [
     name: "Octa",
     status: "Próximamente",
     connects: ["MT5"],
-    note: "Soporte planeado por bridge MT5.",
+    note: "Soporte planeado mediante conector MT5.",
   },
   {
     key: "hfm",
     name: "HFM",
     status: "Próximamente",
     connects: ["MT5"],
-    note: "Soporte planeado por bridge MT5.",
+    note: "Soporte planeado mediante conector MT5.",
   },
   {
     key: "fpmarkets",
     name: "FP Markets",
     status: "Próximamente",
     connects: ["MT5", "FIX"],
-    note: "Integración avanzada con ejecución robusta por gateway.",
+    note: "Integración avanzada con ejecución robusta mediante la conexión Neuro.",
   },
   {
     key: "tickmill",
@@ -134,7 +135,7 @@ export default function BrokersPage() {
                     Brokers compatibles con <span className="text-emerald-400">Neuro</span>
                   </>
                 }
-                subtitle="Conexión por fases • MT5 oculto • Gateway/Bridge • Auditoría"
+                subtitle="Conexión por fases • Broker/MT5 • Conexión Neuro • Auditoría"
                 right={
                   <div className="flex flex-wrap gap-3">
                     <FXButtonPro href="/technology" variant="outline" size="sm">
@@ -150,13 +151,12 @@ export default function BrokersPage() {
                   <div className="lg:col-span-8">
                     <p className="text-white/75 text-sm md:text-base leading-relaxed max-w-3xl">
                       Neuro se conecta por{" "}
-                      <b className="text-white/90">fases</b>: primero mediante <b className="text-white/90">MT5 Bridge</b> (MT5
-                      oculto al usuario), luego conexiones más directas cuando el broker lo permita (API/FIX).
+                      <b className="text-white/90">fases</b>: primero mediante <b className="text-white/90">conector MT5</b> seguro, luego conexiones más directas cuando el broker lo permita (API/FIX).
                     </p>
 
                     <div className="mt-5 flex flex-wrap gap-3">
-                      <FXButtonPro href="/download" variant="primary" size="lg">
-                        Descargar Neuro
+                      <FXButtonPro href={NEURO_REGISTER_URL} variant="primary" size="lg">
+                        Probar Neuro 30 días
                       </FXButtonPro>
                       <FXButtonPro href="/pricing" variant="outline" size="lg">
                         Ver planes
@@ -211,8 +211,8 @@ export default function BrokersPage() {
                 </div>
 
                 <div className="hidden md:flex gap-3">
-                  <FXButtonPro href="/download" variant="outline" size="sm">
-                    Descargar
+                  <FXButtonPro href={NEURO_REGISTER_URL} variant="outline" size="sm">
+                    Probar 30 días
                   </FXButtonPro>
                   <FXButtonPro href="/pricing" variant="secondary" size="sm">
                     Ver planes
@@ -227,8 +227,8 @@ export default function BrokersPage() {
               </div>
 
               <div className="mt-6 flex md:hidden gap-3">
-                <FXButtonPro href="/download" variant="outline" size="sm">
-                  Descargar
+                <FXButtonPro href={NEURO_REGISTER_URL} variant="outline" size="sm">
+                  Probar 30 días
                 </FXButtonPro>
                 <FXButtonPro href="/pricing" variant="secondary" size="sm">
                   Ver planes
@@ -243,13 +243,13 @@ export default function BrokersPage() {
               <Panel3D title="Cómo se conecta Neuro" subtitle="Arquitectura por fases (sin humo)">
                 <div className="grid gap-4 md:grid-cols-3">
                   <StepCard
-                    title="Fase 1 — MT5 Bridge"
-                    desc="Neuro usa un bridge con MT5 para leer cuenta/posiciones y ejecutar órdenes. El usuario no ve MT5."
+                    title="Fase 1 — Conector MT5"
+                    desc="Neuro usa un conector protegido con MT5 para leer cuenta, posiciones y ejecutar órdenes bajo permisos y controles."
                     chips={["MT5", "Auditoría", "Control de riesgo"]}
                   />
                   <StepCard
-                    title="Fase 2 — Gateway Multi-Broker"
-                    desc="Un gateway unifica brokers/cuentas, sincroniza ledger y aplica políticas (Firewall, Capital Shield)."
+                    title="Fase 2 — Conexión Multi-Broker"
+                    desc="La capa de conexión Neuro unifica brokers y cuentas, sincroniza el ledger y aplica políticas de protección."
                     chips={["Routing", "Ledger", "WebSocket"]}
                   />
                   <StepCard
@@ -317,8 +317,8 @@ function BrokerCard({ broker }: { broker: Broker }) {
           <p className="mt-4 text-sm md:text-base text-white/75 leading-relaxed">{broker.note}</p>
 
           <div className="mt-5 flex flex-wrap gap-3">
-            <FXButtonPro href="/download" variant="primary" size="sm">
-              Descargar
+            <FXButtonPro href={NEURO_REGISTER_URL} variant="primary" size="sm">
+              Probar 30 días
             </FXButtonPro>
             <FXButtonPro href="/pricing" variant="outline" size="sm">
               Ver planes

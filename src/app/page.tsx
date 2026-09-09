@@ -1,7 +1,8 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import Navbar from "@/components/site/Navbar";
+import { NEURO_LOGIN_URL, NEURO_REGISTER_URL } from "@/lib/neuroLinks";
 
 const pillars = [
   {
@@ -19,7 +20,7 @@ const pillars = [
 ];
 
 const metrics = [
-  { value: "24/7", label: "monitoreo y soporte operativo" },
+  { value: "CLOUD", label: "acceso online desde tu navegador" },
   { value: "20+", label: "motores de inteligencia integrados" },
   { value: "MT5", label: "puente preparado para trading real" },
 ];
@@ -45,7 +46,7 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
           <div>
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-sm text-cyan-100 shadow-[0_0_40px_rgba(34,211,238,0.12)]">
-              Plataforma de trading con IA, riesgo y disciplina operativa
+              Neuro Cloud · trading con IA, riesgo y disciplina operativa
             </div>
 
             <h1 className="max-w-5xl text-4xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl">
@@ -58,22 +59,31 @@ export default function HomePage() {
 
             <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-300">
               Neuro Trading une análisis técnico, control de riesgo, ejecución
-              protegida y Neuro Chat en una sola plataforma para operar con más
-              disciplina, contexto y trazabilidad.
+              protegida y Neuro Chat en una sola experiencia online. Accede desde
+              tu navegador y empieza directamente en Neuro Cloud, sin instalaciones obligatorias.
             </p>
 
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-              <Link
-                href="/download"
+              <a
+                href={NEURO_REGISTER_URL}
                 className="rounded-2xl bg-cyan-300 px-6 py-4 text-center text-sm font-bold text-slate-950 shadow-[0_0_45px_rgba(34,211,238,0.35)] transition hover:-translate-y-0.5 hover:bg-cyan-200"
               >
-                Descargar plataforma
-              </Link>
-              <Link
-                href="/neuro-chat"
+                Probar Neuro gratis 30 días
+              </a>
+              <a
+                href={NEURO_LOGIN_URL}
                 className="rounded-2xl border border-white/15 bg-white/8 px-6 py-4 text-center text-sm font-bold text-white transition hover:-translate-y-0.5 hover:border-cyan-300/50 hover:bg-white/12"
               >
-                Probar Neuro Chat
+                Iniciar sesión
+              </a>
+            </div>
+
+            <div className="mt-4">
+              <Link
+                href="/neuro-chat"
+                className="text-sm font-semibold text-cyan-200 transition hover:text-white"
+              >
+                Conocer Neuro Chat →
               </Link>
             </div>
 
@@ -162,8 +172,8 @@ export default function HomePage() {
               </h2>
               <p className="mt-5 text-base leading-8 text-slate-400">
                 Neuro Web presenta el producto de forma clara: tecnología,
-                seguridad, brokers, mercado, precios, descarga y asistencia con
-                Neuro Chat.
+                seguridad, brokers, mercado, precios, acceso Cloud y asistencia
+                con Neuro Chat.
               </p>
             </div>
 

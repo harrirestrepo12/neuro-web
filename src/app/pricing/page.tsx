@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import Navbar from "@/components/site/Navbar";
+import { NEURO_REGISTER_URL } from "@/lib/neuroLinks";
 
 type Billing = "mensual" | "anual";
 
@@ -116,7 +117,7 @@ export default function PricingPage() {
 
         <div className="mx-auto max-w-7xl text-center">
           <div className="inline-flex rounded-full border border-emerald-300/20 bg-emerald-300/10 px-5 py-2 text-sm font-semibold text-emerald-100">
-            30 días gratis en todos los planes
+            Prueba de 30 días disponible en todos los planes
           </div>
 
           <h1 className="mx-auto mt-6 max-w-5xl text-5xl font-semibold tracking-tight sm:text-6xl lg:text-7xl">
@@ -226,16 +227,16 @@ export default function PricingPage() {
               </ul>
 
               <div className="mt-8 grid gap-3">
-                <Link
-                  href="/download"
+                <a
+                  href={NEURO_REGISTER_URL}
                   className={`rounded-2xl px-5 py-4 text-center text-sm font-black transition ${
                     plan.featured
                       ? "bg-cyan-300 text-slate-950 hover:bg-cyan-200"
                       : "border border-white/10 bg-white/[0.05] text-white hover:bg-white/10"
                   }`}
                 >
-                  Empezar gratis
-                </Link>
+                  Crear cuenta para probar 30 días
+                </a>
                 <Link
                   href="/neuro-chat"
                   className="rounded-2xl border border-cyan-300/20 bg-cyan-300/10 px-5 py-4 text-center text-sm font-bold text-cyan-100 hover:bg-cyan-300/15"

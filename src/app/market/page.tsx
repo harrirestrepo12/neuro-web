@@ -7,6 +7,7 @@ import FXBackground from "@/components/site/FXBackground";
 import Container from "@/components/layout/Container";
 import FXButtonPro from "@/components/site/FXButtonPro";
 import Panel3D from "@/components/site/Panel3D";
+import { NEURO_REGISTER_URL } from "@/lib/neuroLinks";
 
 import MarketTicker from "@/components/market/MarketTicker";
 import MarketScanner from "@/components/market/MarketScanner";
@@ -630,8 +631,8 @@ export default function MarketPage() {
                       Reconnect
                     </button>
 
-                    <FXButtonPro href="/download" variant="primary" size="sm">
-                      Descargar
+                    <FXButtonPro href={NEURO_REGISTER_URL} variant="primary" size="sm">
+                      Probar Neuro
                     </FXButtonPro>
 
                     <FXButtonPro href="/neuro-chat" variant="secondary" size="sm">
@@ -942,7 +943,7 @@ export default function MarketPage() {
                           </div>
 
                           <p className="mt-4 text-xs leading-relaxed text-white/55">
-                            Si tu gateway WS está activo, esto toma ticks reales ({`type:"tick"`}). Si WS falla, cae a
+                            Si la conexión Neuro en tiempo real está activa, esto toma ticks reales ({`type:"tick"`}). Si WS falla, cae a
                             DEMO automáticamente.
                           </p>
                         </div>

@@ -237,7 +237,7 @@ export default function MarketHeatmap({
           El heatmap debe responder: <span className="text-white/78">¿dónde está la presión del mercado ahora?</span>
         </div>
         <div className="text-[11px] text-white/42">
-          Próximo nivel: intensidad por volatilidad, spread y microestructura real desde gateway.
+          Próximo nivel: intensidad por volatilidad, spread y microestructura real desde la conexión Neuro.
         </div>
       </div>
     </section>

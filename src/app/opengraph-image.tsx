@@ -81,7 +81,7 @@ export default function Image() {
           </div>
 
           <div style={{ marginTop: 34, fontSize: 30, color: "rgba(255,255,255,0.72)", maxWidth: 850, lineHeight: 1.35 }}>
-            Web App instalable · Gestión de riesgo · Conexión a broker · AI Intelligence. Market Edge.
+            Neuro Cloud · Gestión de riesgo · Conexión a broker · AI Intelligence. Market Edge.
           </div>
 
           <div style={{ marginTop: 46, display: "flex", gap: 18, fontSize: 23, fontWeight: 800, color: "#06111f" }}>

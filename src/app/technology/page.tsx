@@ -68,7 +68,7 @@ const MODULES: Module[] = [
     simple: "Evita ejecuciones malas: latencia, slippage y spreads anómalos.",
     tech: {
       purpose: "Protección de ejecución (anti-riesgo extremo) y consistencia del ledger.",
-      inputs: ["latencia gateway↔broker", "slippage observado", "spread actual vs normal", "rechazos del broker"],
+      inputs: ["latencia conexión Neuro↔broker", "slippage observado", "spread actual vs normal", "rechazos del broker"],
       outputs: ["bloqueo de órdenes", "reintentos controlados", "cambio a modo seguro"],
       safeguards: ["no spamear órdenes", "reduce/cierra exposición si se degrada ejecución"],
     },
@@ -127,7 +127,7 @@ const MODULES: Module[] = [
     tag: "Ejecución",
     simple: "Conecta varios brokers/cuentas y distribuye riesgo (por fases).",
     tech: {
-      purpose: "Gateway + módulos por broker con estados consistentes y auditoría.",
+      purpose: "Conexión Neuro + módulos por broker con estados consistentes y auditoría.",
       inputs: ["cuentas demo/real", "estado de conexión", "posiciones/órdenes por cuenta"],
       outputs: ["enrutamiento de órdenes", "split de riesgo", "sincronización ledger"],
       safeguards: ["no mezcla cuentas sin selección explícita", "consistencia de cierres (full/partial)"],
@@ -160,7 +160,7 @@ const FILTERS: readonly Filter[] = ["Todos", "IA", "Riesgo", "Ejecución", "Merc
 const ARCH_BLOCKS = [
   ["Frontend (Next.js)", "UI premium, rápida, clara y orientada a decisión."],
   ["Backend (API + WS)", "Endpoints para market, pricing, neurochat, health y flujos operativos."],
-  ["Gateway / Bridge", "Ejecución, órdenes, cuentas, estados y auditoría consistente."],
+  ["Conexión Neuro", "Ejecución, órdenes, cuentas, estados y auditoría consistente."],
 ] as const;
 
 function cx(...classes: Array<string | false | null | undefined>) {
@@ -435,12 +435,12 @@ export default function TechnologyPage() {
               </div>
 
               <div className="mt-10">
-                <Panel3D title="Arquitectura (visión clara)" subtitle="Frontend + Backend + Gateway / Bridge">
+                <Panel3D title="Arquitectura (visión clara)" subtitle="Frontend + Backend + Conexión Neuro">
                   <div className="grid gap-6 lg:grid-cols-12 lg:items-start">
                     <div className="lg:col-span-7">
                       <p className="max-w-3xl text-white/72">
                         Frontend y backend separados. Mercado en vivo por WebSocket y endpoints propios. Neuro opera
-                        conectado a broker/MT5 mediante gateway/bridge por fases, con foco en consistencia, control de riesgo
+                        conectado a broker/MT5 mediante una capa de conexión por fases, con foco en consistencia, control de riesgo
                         y trazabilidad.
                       </p>
 
@@ -476,7 +476,7 @@ export default function TechnologyPage() {
                         <div className="mt-4 space-y-3">
                           <SummaryRow title="Leer mercado" desc="Market Watch, Radar 360°, eventos y contexto." />
                           <SummaryRow title="Controlar riesgo" desc="Capital Shield, Firewall y validaciones activas." />
-                          <SummaryRow title="Ejecutar con disciplina" desc="Gateway/Bridge, estados consistentes y auditoría." />
+                          <SummaryRow title="Ejecutar con disciplina" desc="Conexión Neuro, estados consistentes y auditoría." />
                         </div>
                       </div>
                     </div>

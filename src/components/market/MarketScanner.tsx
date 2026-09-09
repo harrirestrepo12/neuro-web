@@ -259,7 +259,7 @@ export default function MarketScanner({
           El scanner debe responder una sola pregunta: <span className="text-white/78">¿dónde debo mirar primero?</span>
         </div>
         <div className="text-[11px] text-white/42">
-          Próximo nivel: spread real, slippage, latencia y microestructura desde gateway.
+          Próximo nivel: spread real, slippage, latencia y microestructura desde la conexión Neuro.
         </div>
       </div>
     </section>

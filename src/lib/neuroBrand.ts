@@ -3,7 +3,7 @@
   company: "Neuro",
   domain: "neurotrading.app",
   tagline: "AI Intelligence. Market Edge.",
-  description: "Plataforma inteligente de trading, análisis, riesgo y automatización.",
+  description: "Plataforma Cloud de trading, análisis, riesgo e inteligencia artificial.",
   colors: {
     cyan: "#00E5FF",
     teal: "#00CBA7",
